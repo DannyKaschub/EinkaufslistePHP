@@ -1,0 +1,28 @@
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  font-size: 16px;
+}
+
+header {
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+}
+header div {
+  padding: 1rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+nav ul {
+  padding: 0;
+}
+nav ul li {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li a {
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
