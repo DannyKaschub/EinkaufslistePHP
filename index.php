@@ -16,7 +16,7 @@
             <ul>
                 <li>
                     <a href="?page=add">Hinzufügen</a>
-                    <a href="?page=list">Akruelle Liste</a>
+                    <a href="?page=list">Aktuelle Liste</a>
                 </li>
             </ul>
         </nav>
