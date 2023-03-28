@@ -1,0 +1,17 @@
+[
+    {
+        "produkt": "auto",
+        "menge": "1",
+        "ort": "autohaus"
+    },
+    {
+        "produkt": "kuchen",
+        "menge": "1",
+        "ort": "b\u00e4cker"
+    },
+    {
+        "produkt": "k\u00e4se",
+        "menge": "3",
+        "ort": "Kaufland"
+    }
+]

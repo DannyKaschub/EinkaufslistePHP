@@ -48,4 +48,9 @@ nav ul li a {
   padding: 1rem;
   border-radius: 2rem;
   width: 50%;
+}
+
+.card {
+  margin: 30px 100px 0 100px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
