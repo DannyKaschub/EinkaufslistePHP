@@ -1,17 +1,12 @@
-[
-    {
-        "produkt": "auto",
-        "menge": "1",
-        "ort": "autohaus"
-    },
-    {
+{
+    "1": {
         "produkt": "kuchen",
         "menge": "1",
         "ort": "b\u00e4cker"
     },
-    {
+    "2": {
         "produkt": "k\u00e4se",
         "menge": "3",
         "ort": "Kaufland"
     }
-]
+}

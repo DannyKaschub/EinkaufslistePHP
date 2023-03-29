@@ -26,6 +26,8 @@
     <div>
         <?php
         $produkte = [];
+        $counter = 0;
+
 
         #anzeige der hinzufügen seite
         if ($_GET['page'] == 'add') {
@@ -39,13 +41,14 @@
                 </form>
                 ";
         }
-        #anzeige der liste
+
         
         #läd die produkte.txt wenn sie existiert und erstellt ein json
         if (file_exists('produkte.txt')) {
             $text = file_get_contents('produkte.txt', true);
             $products = json_decode($text, true);
         }
+
 
         #fügt ein neues produkt ins produkte array ein und speichert es wieder als txt.
         if (isset($_POST['produkt'])) {
@@ -58,21 +61,33 @@
         }
 
 
-        if ($_GET['page'] == 'list') {
+        #entfernt das objekt mit dem übergebenen index und speichert die datei neu ab.
+        if (isset($_POST['index'])) {
+            $index = $_POST['index'];
+            unset($products[$index]);
+            file_put_contents('produkte.txt', json_encode($products, JSON_PRETTY_PRINT));
+        }
 
-            foreach ($products as $row) {
-                $produkt = $row['produkt'];
-                $menge = $row['menge'];
+
+        #generiert die liste aller benötigten sachen aus dem json
+        if ($_GET['page'] == 'list') {
+            foreach ($products as $key => $data) {
+                $produkt = $data['produkt'];
+                $menge = $data['menge'];
                 echo "
                     <div class='card'>
                         <span>$menge</span>
                         <span>$produkt</span>
-                        <input type='checkbox'>
+                        <form method='post'>
+                            <input type='hidden' name='index' value='$key'>
+                            <button class='delButton' type='submit'>Löschen</button>
+                        </form>
+    
                     </div>
                 ";
+                $counter++;
             }
         }
-
         ?>
     </div>
 
